@@ -1,10 +1,5 @@
 # JavaScript Functions - 'Ins & Outs'
 
-## Prerequisites
-
-- [JavaScript Reference Types](https://git.generalassemb.ly/ga-wdi-boston/js-reference-types)
-- [JavaScript Functions Study](https://git.generalassemb.ly/ga-wdi-boston/js-functions-study)
-
 ## Objectives
 
 By the end of this talk, developers should be able to:
