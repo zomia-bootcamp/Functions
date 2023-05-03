@@ -9,10 +9,12 @@
 
 By the end of this talk, developers should be able to:
 
-- Create and invoke functions that take reference types as arguments.
-- Create and invoke functions that return reference types.
-- Create and invoke functions that take functions as arguments.
-- Create and invoke functions that return functions.
+- Create and invoke functions.
+- Create and invoke functions that take parameters.
+- Create and invoke functions that return values.
+- Define functions using ```js function expression ``` .
+- Define a function using ```jsarrow function``` notation.
+- Create and invoke concise functions.
 
 ## Preparation
 
