@@ -1,4 +1,5 @@
 /*
+STEP 1
 Let’s say we have a plant that we need to water once a week on Wednesdays. We could define a function expression to help us check the day of the week and if the plant needs to be watered:
 
 - Create a variable named plantNeedsWater using the const variable keyword.
@@ -9,6 +10,20 @@ Let’s say we have a plant that we need to water once a week on Wednesdays. We 
 - Call the plantNeedsWater() and pass in 'Tuesday' as an argument.
 - Test your code: Log plantNeedsWater('Tuesday') to the console. If it worked correctly, you should see false logged to the console.
 */
+
+
+//your code goes here
+
+
+
+
+
+
+
+
+/* 
+STEP 2
+Change plantNeedsWater() to use arrow function syntax.*/
 
 
 //your code goes here
