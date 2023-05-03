@@ -85,7 +85,7 @@ By using parameters, calculateArea() can be reused to compute the area of any re
 
 ### Exercises
 
-Follow the instructions given in  [`./exercizes.js`](./exercizes.js), section 1.
+Follow the instructions given in  [`./exercizes/parameters.js`](./exercizes/parameters.js).
 
 ## Default Parameters
 One of the features added in ES6 is the ability to use default parameters. Default parameters allow parameters to have a predetermined value in case there is no argument passed into the function or if the argument is undefined when called.
@@ -113,10 +113,39 @@ Let’s practice creating functions that use default parameters.
 
 ### Exercises
 
-Follow the instructions geven in [`./exercizes.js`](./exercizes.js), section 2.
+Follow the instructions geven in [`./exercizes/defaultParameters.js`](./exercizes/defaultParameters.js).
 
+## Return
+When a function is called, the computer will run through the function’s code and evaluate the result of calling the function. By default that resulting value is undefined.
 
+```js
+function rectangleArea(width, height) {
+  let area = width * height;
+}
+console.log(rectangleArea(5, 7)) // Prints undefined
+```
+In the code example, we defined our function to calculate the area of a width and height parameter. Then rectangleArea() is invoked with the arguments 5 and 7. But when we went to print the results we got undefined. Did we write our function wrong? No! In fact, the function worked fine, and the computer did calculate the area as 35, but we didn’t capture it. So how can we do that? With the keyword return!
 
+![using return keyword in a function](https://content.codecademy.com/courses/learn-javascript-functions/Diagram/function%20return.svg)
+To pass back information from the function call, we use a [return statement](https://www.codecademy.com/resources/docs/javascript/functions?page_ref=catalog). To create a return statement, we use the return keyword followed by the value that we wish to return. Like we saw above, if the value is omitted, undefined is returned instead.
+
+When a return statement is used in a function body, the execution of the function is stopped and the code that follows it will not be executed. Look at the example below:
+
+```js
+function rectangleArea(width, height) {
+  if (width < 0 || height < 0) {
+    return 'You need positive integers to calculate area!';
+  }
+  return width * height;
+}
+```
+If an argument for width or height is less than 0, then rectangleArea() will return 'You need positive integers to calculate area!'. The second return statement width * height will not run.
+
+The return keyword is powerful because it allows functions to produce an output. We can then save the output to a variable for later use.
+
+### Exercises
+
+Follow the instructions given in  [`./exercizes/returns.js`](./exercizes/returns.js).
 
 
 
