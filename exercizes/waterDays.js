@@ -11,7 +11,6 @@ Let’s say we have a plant that we need to water once a week on Wednesdays. We 
 - Test your code: Log plantNeedsWater('Tuesday') to the console. If it worked correctly, you should see false logged to the console.
 */
 
-
 //your code goes here
 
 
@@ -25,5 +24,20 @@ Let’s say we have a plant that we need to water once a week on Wednesdays. We 
 STEP 2
 Change plantNeedsWater() to use arrow function syntax.*/
 
-
 //your code goes here
+
+
+
+
+/* 
+STEP 3
+Refactor plantNeedsWater() to be a concise body. 
+Notice that we’ve already converted the if/else statement to a ternary operator to make the code fit on one line.
+*/
+
+
+const plantNeedsWater = (day) => {
+  return day === 'Wednesday' ? true : false;
+};
+
+
