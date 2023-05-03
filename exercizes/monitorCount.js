@@ -1,4 +1,5 @@
 /*
+STEP 1
 We needed to order monitors for everyone in an office and this office is conveniently arranged in a grid shape. 
 We could use a function to help us calculate the number of monitors needed!
 
@@ -14,3 +15,21 @@ Declare a variable named numOfMonitors using the const keyword and assign numOfM
 */
 
 //your code goes here
+
+
+
+
+/*
+STEP 2
+
+Write another function that uses the monitorCount function to figure out the price.
+
+- Below monitorCount Create a function declaration named costOfMonitors that has two parameters, 
+the first parameter is rows and the second parameter is columns.
+- Add a return statement that returns the value of calling monitorCount(rows, columns) multiplied by 200.
+- Declare a variable that will store the value of calling costOfMonitors() with the arguments 5 and 4 respectively.
+- To check that the function worked properly, use the console.log method.
+*/
+
+//your code goes here
+
