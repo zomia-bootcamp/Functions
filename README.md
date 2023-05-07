@@ -82,7 +82,7 @@ By using parameters, calculateArea() can be reused to compute the area of any re
 
 ### Exercises
 
-Follow the instructions given in  [`./exercizes/parameters.js`](./exercizes/parameters.js).
+Follow the instructions given in  [`./exercises/parameters.js`](./exercises/parameters.js).
 
 ## Default Parameters
 One of the features added in ES6 is the ability to use default parameters. Default parameters allow parameters to have a predetermined value in case there is no argument passed into the function or if the argument is undefined when called.
@@ -110,7 +110,7 @@ Let’s practice creating functions that use default parameters.
 
 ### Exercises
 
-Follow the instructions geven in [`./exercizes/defaultParameters.js`](./exercizes/defaultParameters.js).
+Follow the instructions geven in [`./exercises/defaultParameters.js`](./exercises/defaultParameters.js).
 
 ## Return
 When a function is called, the computer will run through the function’s code and evaluate the result of calling the function. By default that resulting value is undefined.
@@ -142,7 +142,7 @@ The return keyword is powerful because it allows functions to produce an output.
 
 ### Exercises
 
-Follow the instructions given in  [`./exercizes/monitorCount.js`](./exercizes/monitorCount.js), step 1 only.
+Follow the instructions given in  [`./exercises/monitorCount.js`](./exercises/monitorCount.js), step 1 only.
 
 ## Helper Functions
 We can also use the return value of a function inside another function. These functions being called within another function are often referred to as helper functions. Since each function is carrying out a specific task, it makes our code easier to read and debug if necessary.
@@ -173,7 +173,7 @@ We can use functions to section off small bits of logic or tasks, then use them 
 
 ### Exercises
 
-Follow the instructions given in  [`./exercizes/monitorCount.js`](./exercizes/monitorCount.js) step 2 only.
+Follow the instructions given in  [`./exercises/monitorCount.js`](./exercises/monitorCount.js) step 2 only.
 
 ## Function Expressions
 ### Group Activity
@@ -200,7 +200,7 @@ Let’s define a new function using a function expression.
 
 ### Exercises
 
-Follow the instructions given in  [`./exercizes/waterDays.js`](./exercizes/waterDays.js)step 1 only.
+Follow the instructions given in  [`./exercises/waterDays.js`](./exercises/waterDays.js)step 1 only.
 
 ## Arrow Functions
 ### Group Activity
@@ -218,7 +218,7 @@ It’s important to be familiar with the multiple ways of writing functions beca
 
 ### Exercises
 
-Follow the instructions given in  [`./exercizes/waterDays.js`](./exercizes/waterDays.js) step 2 only.
+Follow the instructions given in  [`./exercises/waterDays.js`](./exercises/waterDays.js) step 2 only.
 
 ## Concise Body Arrow Functions
 ### Group Activity
@@ -251,4 +251,4 @@ Notice the following changes:
 
 ### Exercises
 
-Follow the instructions given in  [`./exercizes/waterDays.js`](./exercizes/waterDays.js) step 3 only.
+Follow the instructions given in  [`./exercises/waterDays.js`](./exercises/waterDays.js) step 3 only.
