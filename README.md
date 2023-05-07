@@ -17,7 +17,7 @@ By the end of this talk, developers should be able to:
 1. Create a new branch, `training`, for your work.
 1. Install dependencies with `npm install`.
 
-##intro
+## intro
  What are Functions?
 When first learning how to calculate the area of a rectangle, there’s a sequence of steps to calculate the correct answer:
 
