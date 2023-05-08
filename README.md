@@ -1,40 +1,40 @@
-# JavaScript Functions - 'Ins & Outs'
+# JavaScript Functions
 
 ## Objectives
 
-By the end of this talk, developers should be able to:
-
 - Create and invoke functions.
-- Create and invoke functions that take parameters.
+- Create and invoke functions with parameters.
 - Create and invoke functions that return values.
-- Define functions using ```js function expression ``` .
-- Define a function using ```jsarrow function``` notation.
+- Define functions using the `function expression` syntax.
+- Define functions using arrow function notation.
 - Create and invoke concise functions.
 
 ## Preparation
 
 1. Fork and clone this repository.
-1. Create a new branch, `training`, for your work.
-1. Install dependencies with `npm install`.
+2. Create a new branch called `training` for your work.
+3. Install the necessary dependencies using `npm install`.
 
-## intro
- What are Functions?
-When first learning how to calculate the area of a rectangle, there’s a sequence of steps to calculate the correct answer:
+## Introduction
+What are Functions?
+
+When learning how to calculate the area of a rectangle, there are a series of steps to follow:
 
 1. Measure the width of the rectangle.
 2. Measure the height of the rectangle.
-3. Multiply the width and height of the rectangle.
-With practice, you can calculate the area of the rectangle without being instructed with these three steps every time.
+3. Multiply the width by the height to get the area.
 
-We can calculate the area of one rectangle with the following code:
+With practice, you can calculate the area of a rectangle without explicitly following these steps every time.
+
+Here's an example of calculating the area of a single rectangle:
 
 ```js
 const width = 10;
 const height = 6;
-const area =  width * height;
+const area = calculateArea(width, height);
 console.log(area); // Output: 60
-```
-Imagine being asked to calculate the area of three different rectangles:
+
+Now, imagine being asked to calculate the area of three different rectangles:
 
 ```js
 // Area of the first rectangle
@@ -52,68 +52,69 @@ const width3 = 10;
 const height3 = 10;
 const area3 =  width3 * height3;
 ```
-In programming, we often use code to perform a specific task multiple times. Instead of rewriting the same code, we can group a block of code together and associate it with one task, then we can reuse that block of code whenever we need to perform the task again. We achieve this by creating a function. A function is a reusable block of code that groups together a sequence of statements to perform a specific task.
+In programming, we often need to perform the same task multiple times. Rather than repeating the same code, we can group it together in a block and associate it with a specific task. This is achieved by creating a function. A function is a reusable block of code that consists of a sequence of statements to perform a specific task.
 
-In this lesson, you will learn how to create and use functions, and how they can be used to create clearer and more concise code.
+In this lesson, you will learn how to create and use functions, and how they can help you write clearer and more concise code.
 
 ## Function Declarations
 ### Self Study
 
-Open the CodeCademy class on [functions](https://www.codecademy.com/courses/introduction-to-javascript/lessons/functions/exercises/intro-to-functions) and go through pages 1-3
+To learn more about function declarations, you can explore the CodeCademy class on [functions](https://www.codecademy.com/courses/introduction-to-javascript/lessons/functions/exercises/intro-to-functions). Go through pages 1-3 to deepen your understanding.
 
 ## Parameters and Arguments
-So far, the functions we’ve created execute a task without an input. However, some functions can take inputs and use the inputs to perform a task. When declaring a function, we can specify its parameters. Parameters allow functions to accept input(s) and perform a task using the input(s). We use parameters as placeholders for information that will be passed to the function when it is called.
+Until now, the functions we've created perform tasks without taking any inputs. However, there are cases where functions need to accept inputs and use them to accomplish a task. When defining a function, we can specify its parameters. Parameters act as placeholders for the inputs that will be provided to the function when it is called.
 
-Let’s observe how to specify parameters in our function declaration:
+Let's take a look at how we can declare parameters in a function:
 
 ![JavaScript syntax for declaring a function with parameters](https://content.codecademy.com/courses/learn-javascript-functions/Diagram/declaration.svg)
 
-In the diagram above, calculateArea(), computes the area of a rectangle, based on two inputs, width and height. The parameters are specified between the parenthesis as width and height, and inside the function body, they act just like regular variables. width and height act as placeholders for values that will be multiplied together.
+In the above diagram, `calculateArea()` is a function that calculates the area of a rectangle based on two inputs: `width` and `height`. The parameters `width` and `height` are specified between the parentheses, and within the function body, they function just like regular variables. They act as placeholders for the values that will be multiplied together.
 
-When calling a function that has parameters, we specify the values in the parentheses that follow the function name. The values that are passed to the function when it is called are called arguments. Arguments can be passed to the function as values or variables.
+When calling a function with parameters, we provide the values in the parentheses following the function name. These values are called arguments. Arguments can be passed as either values or variables.
+
 ![JavaScript syntax for invoking a function with arguments as values](https://static-assets.codecademy.com/Courses/Learn-JavaScript/by_value.svg)
 
-In the function call above, the number 10 is passed as the width and 6 is passed as height. Notice that the order in which arguments are passed and assigned follows the order that the parameters are declared.
+In the function call above, the number 10 is passed as the `width` and 6 is passed as the `height`. It's important to note that the order of the arguments corresponds to the order in which the parameters are declared.
+
 ![JavaScript syntax for invoking a function with arguments as variables](https://static-assets.codecademy.com/Courses/Learn-JavaScript/by_variable.svg)
 
-The variables rectWidth and rectHeight are initialized with the values for the height and width of a rectangle before being used in the function call.
+In the function call above, the variables `rectWidth` and `rectHeight` are assigned with the values representing the width and height of a rectangle before being used as arguments.
 
-By using parameters, calculateArea() can be reused to compute the area of any rectangle! Functions are a powerful tool in computer programming so let’s practice creating and calling functions with parameters.
+By utilizing parameters, `calculateArea()` becomes a reusable function that can compute the area of any rectangle! Functions are a powerful tool in programming, so let's practice creating and calling functions with parameters.
 
 ### Exercises
 
 Follow the instructions given in  [`./exercises/parameters.js`](./exercises/parameters.js).
 
 ## Default Parameters
-One of the features added in ES6 is the ability to use default parameters. Default parameters allow parameters to have a predetermined value in case there is no argument passed into the function or if the argument is undefined when called.
+One of the new features introduced in ES6 is the ability to use default parameters. Default parameters allow us to assign a predetermined value to a parameter in case no argument is passed to the function or if the argument is undefined.
 
-Take a look at the code snippet below that uses a default parameter:
+Take a look at the code snippet below that demonstrates the use of default parameters:
 
 ```js
-function greeting (name = 'stranger') {
-  console.log(`Hello, ${name}!`)
+function greeting(name = 'stranger') {
+  console.log(`Hello, ${name}!`);
 }
- 
-greeting('Nick') // Output: Hello, Nick!
-greeting() // Output: Hello, stranger!
+
+greeting('Nick'); // Output: Hello, Nick!
+greeting(); // Output: Hello, stranger!
 ```
  
-- In the example above, we used the = operator to assign the parameter name a default value of 'stranger'. This is useful to have in case we ever want to include a non-personalized default greeting!
+- In the example above, we used the = operator to assign a default value of 'stranger' to the name parameter. This default value is used when no argument is provided or if the argument is undefined. It allows us to have a generic greeting when a personalized name is not given.
 
-- When the code calls greeting('Nick') the value of the argument is passed in and, 'Nick', will override the default parameter of 'stranger' to log 'Hello, Nick!' to the console.
+- When we call greeting('Nick'), the argument 'Nick' is passed, overriding the default parameter 'stranger', and the output is 'Hello, Nick!'.
 
-- When there isn’t an argument passed into greeting(), the default value of 'stranger' is used, and 'Hello, stranger!' is logged to the console.
+- When we call greeting() without any argument, the default value 'stranger' is used, and the output is 'Hello, stranger!'.
 
-By using a default parameter, we account for situations when an argument isn’t passed into a function that is expecting an argument.
+By using default parameters, we handle situations where an argument is missing when a function expects one.
 
-Let’s practice creating functions that use default parameters.
+Let's practice creating functions that use default parameters.
 
-### Exercises
-
-Follow the instructions geven in [`./exercises/defaultParameters.js`](./exercises/defaultParameters.js).
+## Exercises
+Please follow the instructions provided in [./exercises/defaultParameters.js](./exercises/defaultParameters.js).
 
 ## Return
-When a function is called, the computer will run through the function’s code and evaluate the result of calling the function. By default that resulting value is undefined.
+When we call a function, the computer executes its code and calculates a result. By default, this result is undefined.
 
 ```js
 function rectangleArea(width, height) {
@@ -121,12 +122,13 @@ function rectangleArea(width, height) {
 }
 console.log(rectangleArea(5, 7)) // Prints undefined
 ```
-In the code example, we defined our function to calculate the area of a width and height parameter. Then rectangleArea() is invoked with the arguments 5 and 7. But when we went to print the results we got undefined. Did we write our function wrong? No! In fact, the function worked fine, and the computer did calculate the area as 35, but we didn’t capture it. So how can we do that? With the keyword return!
+In the code example, we defined a function called `calculateRectangleArea` to find the area of a rectangle based on its width and height. We invoked the function `calculateRectangleArea()` with arguments 5 and 7. However, when we tried to print the result, we got undefined. Did we make a mistake in our function? No! In fact, the function worked correctly, and the computer did calculate the area as 35, but we didn't capture it. So, how can we do that? By using the keyword `return`!
 
-![using return keyword in a function](https://content.codecademy.com/courses/learn-javascript-functions/Diagram/function%20return.svg)
-To pass back information from the function call, we use a [return statement](https://www.codecademy.com/resources/docs/javascript/functions?page_ref=catalog). To create a return statement, we use the return keyword followed by the value that we wish to return. Like we saw above, if the value is omitted, undefined is returned instead.
+![Using return keyword in a function](https://content.codecademy.com/courses/learn-javascript-functions/Diagram/function%20return.svg)
 
-When a return statement is used in a function body, the execution of the function is stopped and the code that follows it will not be executed. Look at the example below:
+To pass back information from a function call, we use a return statement. It consists of the keyword `return` followed by the value we want to return. If we omit the value, undefined is returned.
+
+When a return statement is used inside a function, the execution of the function stops, and the subsequent code is not executed. Consider the following example:
 
 ```js
 function rectangleArea(width, height) {
@@ -136,18 +138,18 @@ function rectangleArea(width, height) {
   return width * height;
 }
 ```
-If an argument for width or height is less than 0, then rectangleArea() will return 'You need positive integers to calculate area!'. The second return statement width * height will not run.
+If the width or height argument is less than 0, the function `calculateRectangleArea()` will return 'You need positive integers to calculate the area!'. The second return statement `width * height` will not be executed.
 
-The return keyword is powerful because it allows functions to produce an output. We can then save the output to a variable for later use.
+The return keyword is powerful because it allows functions to produce an output. We can store this output in a variable for later use.
 
 ### Exercises
 
-Follow the instructions given in  [`./exercises/monitorCount.js`](./exercises/monitorCount.js), step 1 only.
+Follow the instructions provided in [`./exercises/monitorCount.js`](./exercises/monitorCount.js), step 1 only.
 
 ## Helper Functions
-We can also use the return value of a function inside another function. These functions being called within another function are often referred to as helper functions. Since each function is carrying out a specific task, it makes our code easier to read and debug if necessary.
+We can also use the return value of one function inside another function. These functions called within another function are commonly known as helper functions. By breaking down tasks into smaller functions, our code becomes easier to read and debug if needed.
 
-If we wanted to define a function that converts the temperature from Celsius to Fahrenheit, we could write two functions like:
+Suppose we want to convert the temperature from Celsius to Fahrenheit. We can define two functions as follows:
 
 ```js
 function multiplyByNineFifths(number) {
@@ -162,51 +164,50 @@ getFahrenheit(15); // Returns 59
 ```
 In the example above:
 
-- ```js getFahrenheit() ``` is called and 15 is passed as an argument.
-- The code block inside of ```js getFahrenheit() ``` calls ```js multiplyByNineFifths() ``` and passes 15 as an argument.
-- ```js multiplyByNineFifths()``` takes the argument of 15 for the number parameter.
-- The code block inside of ```js multiplyByNineFifths() ``` function multiplies 15 by (9/5), which evaluates to 27.
-- 27 is returned back to the function call in ```js getFahrenheit()```.
-- ```js getFahrenheit() ``` continues to execute. It adds 32 to 27, which evaluates to 59.
-- Finally, 59 is returned back to the function call ```js getFahrenheit(15)```.
-We can use functions to section off small bits of logic or tasks, then use them when we need to. Writing helper functions can help take large and difficult tasks and break them into smaller and more manageable tasks.
+- We call the function `getFahrenheit()` with an argument of 15.
+- Inside `getFahrenheit()`, we call the function `multiplyByNineFifths()` with 15 as the argument.
+- `multiplyByNineFifths()` takes the `number` parameter with a value of 15.
+- Inside `multiplyByNineFifths()`, we multiply 15 by (9/5), resulting in 27.
+- The value 27 is returned to the `getFahrenheit()` function call.
+- `getFahrenheit()` continues executing by adding 32 to 27, resulting in 59.
+- Finally, the value 59 is returned to the `getFahrenheit(15)` function call.
+
+Using functions helps us break down complex tasks into manageable parts. These helper functions make our code more organized and easier to understand and troubleshoot.
 
 ### Exercises
 
-Follow the instructions given in  [`./exercises/monitorCount.js`](./exercises/monitorCount.js) step 2 only.
+Follow the instructions provided in [`./exercises/monitorCount.js`](./exercises/monitorCount.js), step 2 only.
 
-## Function Expressions
-### Group Activity
 
-Another way to define a function is to use a function expression. To define a function inside an expression, we can use the function keyword. In a function expression, the function name is usually omitted. A function with no name is called an anonymous function. A function expression is often stored in a variable in order to refer to it.
+Another way to define a function is by using a function expression. In a function expression, the function name is usually not specified, making it an anonymous function. Function expressions are often stored in variables for easy reference.
 
-Consider the following function expression:
+To define a function expression:
+1. Declare a variable, typically using `const`.
+2. Assign an anonymous function to the variable using the `function` keyword followed by parentheses for parameters and curly braces for the function body.
 
-![defining a function expression](https://content.codecademy.com/courses/learn-javascript-functions/Diagram/expression.svg)
-To declare a function expression:
-
-1. Declare a variable to make the variable’s name be the name, or identifier, of your function. Since the release of ES6, it is common practice to use const as the keyword to declare the variable.
-
-2. Assign as that variable’s value an anonymous function created by using the function keyword followed by a set of parentheses with possible parameters. Then a set of curly braces that contain the function body.
-
-To invoke a function expression, write the name of the variable in which the function is stored followed by parentheses enclosing any arguments being passed into the function.
+To invoke a function expression, use the variable name followed by parentheses and any necessary arguments.
 
 ```js
 variableName(argument1, argument2)
 ```
-Unlike function declarations, function expressions are not hoisted so they cannot be called before they are defined.
+Unlike function declarations, function expressions cannot be called before they are defined.
 
-Let’s define a new function using a function expression.
+Let's define a new function using a function expression.
 
 ### Exercises
 
-Follow the instructions given in  [`./exercises/waterDays.js`](./exercises/waterDays.js)step 1 only.
+Follow the instructions in [`./exercises/waterDays.js`](./exercises/waterDays.js), step 1 only.
 
 ## Arrow Functions
 ### Group Activity
-ES6 introduced arrow function syntax, a shorter way to write functions by using the special “fat arrow” () => notation.
 
-[Arrow functions](https://www.codecademy.com/resources/docs/javascript/arrow-functions?page_ref=catalog) remove the need to type out the keyword function every time you need to create a function. Instead, you first include the parameters inside the ( ) and then add an arrow => that points to the function body surrounded in { } like this:
+ES6 introduced arrow function syntax as a shorter way to write functions. Arrow functions use the `() =>` notation and eliminate the need for the `function` keyword.
+
+To create an arrow function:
+1. Place the parameters inside parentheses.
+2. Use the `=>` arrow to indicate the function body enclosed in curly braces.
+
+Here's an example:
 
 ```js
 const rectangleArea = (width, height) => {
@@ -214,21 +215,22 @@ const rectangleArea = (width, height) => {
   return area;
 };
 ```
-It’s important to be familiar with the multiple ways of writing functions because you will come across each of these when reading other JavaScript code.
+It's important to be familiar with different ways of writing functions as you'll encounter them when reading JavaScript code.
 
 ### Exercises
 
-Follow the instructions given in  [`./exercises/waterDays.js`](./exercises/waterDays.js) step 2 only.
+Follow the instructions in [`./exercises/waterDays.js`](./exercises/waterDays.js), step 2 only.
 
 ## Concise Body Arrow Functions
 ### Group Activity
 
-JavaScript also provides several ways to refactor [arrow function](https://www.codecademy.com/resources/docs/javascript/arrow-functions?page_ref=catalog) syntax. The most condensed form of the function is known as concise body. We’ll explore a few of these techniques below:
+JavaScript provides ways to refactor [arrow function](https://www.codecademy.com/resources/docs/javascript/arrow-functions?page_ref=catalog) syntax, and one of the most condensed forms is called concise body. Here are a few techniques:
 
-1. Functions that take only a single parameter do not need that parameter to be enclosed in parentheses. However, if a function takes zero or multiple parameters, parentheses are required.
+1. Functions with a single parameter don't need parentheses around the parameter.
 
 ![showcasing how arrow functions parameters differ for different amounts of parameters](https://content.codecademy.com/courses/learn-javascript-2. 2.  functions/Diagram/parameters.svg)
-2. A function body composed of a single-line block does not need curly braces. Without the curly braces, whatever that line evaluates will be automatically returned. The contents of the block should immediately follow the arrow => and the return keyword can be removed. This is referred to as implicit return.
+
+2. A single-line function body doesn't require curly braces. The result of that line is automatically returned. This is known as implicit return.
 
 ![comparing single line and multiline arrow functions](https://content.codecademy.com/courses/learn-javascript-functions/Diagram/return.svg)
 So if we have a function:
@@ -251,4 +253,4 @@ Notice the following changes:
 
 ### Exercises
 
-Follow the instructions given in  [`./exercises/waterDays.js`](./exercises/waterDays.js) step 3 only.
+Follow the instructions given in  [`./exercises/waterDays.js`](./exercises/waterDays.js), step 3 only.
