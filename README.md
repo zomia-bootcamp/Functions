@@ -32,7 +32,7 @@ Here's an example of calculating the area of a single rectangle:
 const width = 10;
 const height = 6;
 const area = calculateArea(width, height);
-console.log(area); // Output: 60
+console.log(area); 
 ```
 
 Now, imagine being asked to calculate the area of three different rectangles:
