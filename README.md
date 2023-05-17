@@ -97,8 +97,8 @@ function greeting(name = 'stranger') {
   console.log(`Hello, ${name}!`);
 }
 
-greeting('Nick'); // Output: Hello, Nick!
-greeting(); // Output: Hello, stranger!
+greeting('Nick'); 
+greeting(); 
 ```
  
 - In the example above, we used the = operator to assign a default value of 'stranger' to the name parameter. This default value is used when no argument is provided or if the argument is undefined. It allows us to have a generic greeting when a personalized name is not given.
@@ -121,7 +121,7 @@ When we call a function, the computer executes its code and calculates a result.
 function rectangleArea(width, height) {
   let area = width * height;
 }
-console.log(rectangleArea(5, 7)) // Prints undefined
+console.log(rectangleArea(5, 7))
 ```
 In the code example, we defined a function called `calculateRectangleArea` to find the area of a rectangle based on its width and height. We invoked the function `calculateRectangleArea()` with arguments 5 and 7. However, when we tried to print the result, we got undefined. Did we make a mistake in our function? No! In fact, the function worked correctly, and the computer did calculate the area as 35, but we didn't capture it. So, how can we do that? By using the keyword `return`!
 
@@ -161,7 +161,7 @@ function getFahrenheit(celsius) {
   return multiplyByNineFifths(celsius) + 32;
 };
  
-getFahrenheit(15); // Returns 59
+getFahrenheit(15); 
 ```
 In the example above:
 
