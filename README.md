@@ -21,8 +21,13 @@ JavaScript functions are blocks of code that perform specific tasks. They are li
 
 Functions are helpful because they promote code reusability. Instead of writing the same code multiple times, you can define a function once and then reuse it whenever needed. This saves time and effort.
 
+A function is similar to a toaster in a few ways.
+
+
 ![toaster function](https://scausey.github.io/assets/images/toasterFunctionDiagram.jpg)
-A function is similar to a toaster in a few ways. First, just as a toaster has a specific purpose of toasting bread, a function serves a specific purpose in a program by performing a particular task or operation.
+
+
+ First, just as a toaster has a specific purpose of toasting bread, a function serves a specific purpose in a program by performing a particular task or operation.
 
 Moreover, a toaster can be used repeatedly to toast different slices of bread, and similarly, a function can be reused multiple times to perform the same task on different inputs. This reusability saves time and effort, as you don't have to write the same code from scratch each time you need that functionality.
 
