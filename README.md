@@ -197,6 +197,7 @@ Using functions helps us break down complex tasks into manageable parts. These h
 
 Follow the instructions provided in [`./exercises/monitorCount.js`](./exercises/monitorCount.js), step 2 only.
 
+## Anonymous Function
 
 Another way to define a function is by using a function expression. In a function expression, the function name is usually not specified, making it an anonymous function. Function expressions are often stored in variables for easy reference.
 
@@ -212,6 +213,16 @@ variableName(argument1, argument2)
 Unlike function declarations, function expressions cannot be called before they are defined.
 
 Let's define a new function using a function expression.
+
+```js
+
+console.log(substraction(3, 1))
+
+ const substraction = function(num1, num2){
+   return num1 - num2
+}
+
+```
 
 ### Exercises
 
