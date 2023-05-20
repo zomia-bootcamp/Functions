@@ -284,3 +284,8 @@ Notice the following changes:
 ### Exercises
 
 Follow the instructions given in  [`./exercises/waterDays.js`](./exercises/waterDays.js), step 3 only.
+
+
+### Additional Resources
+
+* [Function exercises](https://www.teaching-materials.org/javascript/exercises/functions)
