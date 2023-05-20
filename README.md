@@ -79,8 +79,14 @@ Until now, the functions we've created perform tasks without taking any inputs. 
 
 Let's take a look at how we can declare parameters in a function:
 
-![JavaScript syntax for declaring a function with parameters](https://content.codecademy.com/courses/learn-javascript-functions/Diagram/declaration.svg)
+```js
 
+function calaulateArea(width, height){
+  
+  console.log(width * height)
+
+}
+```
 In the above diagram, `calculateArea()` is a function that calculates the area of a rectangle based on two inputs: `width` and `height`. The parameters `width` and `height` are specified between the parentheses, and within the function body, they function just like regular variables. They act as placeholders for the values that will be multiplied together.
 
 When calling a function with parameters, we provide the values in the parentheses following the function name. These values are called arguments. Arguments can be passed as either values or variables.
