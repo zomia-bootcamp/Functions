@@ -54,3 +54,4 @@ const oddOrEven = (num) => {
 const oddOrEven2 = num => num % 2 === 0 ? 'even' : 'odd';
 
 console.log(oddOrEven2(16));
+// commit
