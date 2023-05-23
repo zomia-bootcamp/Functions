@@ -13,11 +13,13 @@ Let’s say we have a plant that we need to water once a week on Wednesdays. We 
 
 //your code goes here
 
-
-
-
-
-
+// let plantNeedsWater = function (day) {
+//   if (day === "Wednesday") {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 
 
 /* 
@@ -25,6 +27,15 @@ STEP 2
 Change plantNeedsWater() to use arrow function syntax.*/
 
 //your code goes here
+// const plantNeedsWater = (day) => {
+//   if (day === "Wednesday") {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// console.log(plantNeedsWater('Wednesday'));
 
 
 
@@ -36,8 +47,11 @@ Notice that we’ve already converted the if/else statement to a ternary operato
 */
 
 
-const plantNeedsWater = (day) => {
-  return day === 'Wednesday' ? true : false;
-};
+const oddOrEven = (num) => {
+  return num % 2 === 0 ? 'even' : 'odd';
+}
 
+const oddOrEven2 = num => num % 2 === 0 ? 'even' : 'odd';
 
+console.log(oddOrEven2(16));
+// commit
